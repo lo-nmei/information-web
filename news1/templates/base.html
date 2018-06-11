@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>
+    {% block title %}
+        <p> article of shiyanlou and world </p>
+    {% endblock %}
+</title>
+</head>
+<body>
+    <div>
+        {% block header %}
+            <p> this is header </p>
+        {% endblock %}
+    </div>
+    <div>
+        {% block content %}
+        <p> {{ content }} </p>
+        {% endblock %}
+    </div>
+    <div>
+        {% block create_time %}
+            <p> {{ create_time }} </p>
+        {% endblock %}
+    </div>
+    <div>
+        {% block category %} 
+            <p> {{ category }} </p>
+        {% endblock %}
+    </div>
+    <div>
+        {% block footer %}
+        &copy; Copyright 2017 by <a href="www.shiyanlou.com/">shiyanlou</a>
+        {% endblock %}
+    </div>
+</body>
+</html>
+
+
