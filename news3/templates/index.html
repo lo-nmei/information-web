@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Index{% endblock %}
+
+{% block body %}
+<ul>
+    {% for i in l %}
+    <li><b><a href='{{ url_for('file',file_id= i.id) }}'>{{ i.title }}</a></b></li>
+    <p>{% for tag in i.tags %}
+           {{ tag.name }}
+        {% endfor %}
+    </p>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+
